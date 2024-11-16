@@ -1,0 +1,18 @@
+User
+{
+    "username": "user",
+    "password": "password123"
+}
+
+Assignment
+{
+    "userId": "user",
+    "task": "new assignemnt1",
+    "admin": "admin"
+}
+
+Admin
+{
+    "username": "user",
+    "password": "password123"
+}

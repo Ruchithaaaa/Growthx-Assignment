@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "2b31bcc1-a7d4-4473-9f0c-ff503d124ada",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39774169"
+	},
+	"item": [
+		{
+			"name": "UserRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/register",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"user1\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadAssignment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"user1\",\r\n  \"task\": \"Hello World\",\r\n  \"admin\": \"admin1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/user/upload",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAdmins",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/user/admins",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"user",
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminRegister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/admin/register",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdminLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"admin1\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/admin/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAssignments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMTY5NjE1OSwianRpIjoiZWEyZGYwYWYtOWU4Zi00OGM3LWFkMTYtZDU1ZGJhZWFiOWFjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluMSIsIm5iZiI6MTczMTY5NjE1OSwiY3NyZiI6ImJlNDg0NDBlLWMzMzctNDYzNi1hYzNhLWQzN2Y4NTQ4N2FiYiIsImV4cCI6MTczMTY5NzA1OX0.IiRKWfe2EwJLd9_T20cqoegNbF5xC06xgVQIov0XiQo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/admin/assignments",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"admin",
+						"assignments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AcceptAssignment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMTY5NjM4MywianRpIjoiYTdhM2IyZTktYmZlYy00ZWYyLWJkMmQtODA3ZjQyZjY3OGIxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluMSIsIm5iZiI6MTczMTY5NjM4MywiY3NyZiI6IjIxYzE1ZWIwLWIxYjctNDZjYi1iNzk5LTYyYjQyM2VkMjEzMSIsImV4cCI6MTczMTY5NzI4M30.JC7ADSscMznEyuUk4vVVVYl5ltbbU3wuYGRekYjdERI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/admin/assignments/673791040d33853eb1525e91/accept",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"admin",
+						"assignments",
+						"673791040d33853eb1525e91",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RejectAssignment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTczMTY5NzcwOCwianRpIjoiODBlMzQ1YzgtMGU3Yi00YTA3LTkzNTUtNTgyNTVjYmUzYTYzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6ImFkbWluMSIsIm5iZiI6MTczMTY5NzcwOCwiY3NyZiI6IjgxN2Q4MDJiLTA3NWItNDJlZS1iZTRhLWM2MDIzMTkyYjUxMSIsImV4cCI6MTczMTY5ODYwOH0.JBnsBdgtQJWei0T1t5Z3WXxRP2jmiRKz13UoLN5YsNM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/admin/assignments/67379bc70ebeab3847df767c/reject",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"admin",
+						"assignments",
+						"67379bc70ebeab3847df767c",
+						"reject"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
